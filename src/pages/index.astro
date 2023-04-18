@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HorizontalCard from '../components/HorizontalCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout>
+    <div class="pb-12 mt-5">
+        <div class="text-xl py-1">Hey there 👋</div>
+        <div class="text-5xl font-bold">I'm Harrison.</div>
+        <div class="text-3xl py-3 font-bold">Technical Support &amp; Software Engineer</div>
+        <div class="py-2">
+            <text class="text-lg">
+                With a strong interest in IT and technology, I possess extensive experience in developing full-stack web
+                applications, configuring telephone systems, managing Linux systems, and providing general IT service
+                desk support, honing a lot of my skills through my years of work in the hosting and managed services
+                sectors.
+            </text>
+        </div>
+
+        <div class="py-2">
+            <text class="text-lg">
+                I spend a lot of my time working on side projects and building my upcoming SaaS product, utilizing my
+                favourite programming languages such as PHP, Laravel, React, JavaScript, Next.js, and Python.
+            </text>
+        </div>
+        <div class="mt-8">
+            <a class="btn" href="mailto:hello@harrisonr.uk" target="_blank"> Let's connect!</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="text-3xl w-full font-bold mb-2">My latest projects 💻</div>
+    </div>
+
+    <HorizontalCard
+            title="Public Uptime"
+            img="https://raw.githubusercontent.com/harrisonratcliffe/images/main/publicuptime.webp"
+            desc="An open-source status page app. 🚀"
+            url="https://github.com/harrisonratcliffe/publicuptime"
+            badge="Coming Soon"
+    />
+    <div class="divider my-0"></div>
+    <HorizontalCard
+            title="PHP MySQL Connection Checker"
+            img="https://raw.githubusercontent.com/harrisonratcliffe/images/main/php-mysql-connection-checker.png"
+            desc="A simple tool to check you can connect to your MySQL server, built in PHP."
+            url="https://github.com/harrisonratcliffe/php-mysql-connection-checker"
+    />
+    <div class="divider my-0"></div>
+    <HorizontalCard
+            title="PHP SMTP Checker"
+            img="https://raw.githubusercontent.com/harrisonratcliffe/images/main/php-smtp-checker.png"
+            desc="A simple tool to check your SMTP is working, built in PHP."
+            url="https://github.com/harrisonratcliffe/php-smtp-checker"
+    />
+
+    <!--
+    <div>
+        <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    </div>
+
+    {
+        last_posts.map(post => (
+            <>
+                <HorizontalCard
+                    title={post.data.title}
+                    img={post.data.heroImage}
+                    desc={post.data.description}
+                    url={'/blog/' + post.slug}
+                    target="_self"
+                    badge={post.data.badge}
+                />
+                <div class="divider my-0" />
+            </>
+        ))
+    }
+    -->
+</BaseLayout>

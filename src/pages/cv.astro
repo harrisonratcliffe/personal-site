@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimeLineElement from '../components/cv/TimeLine.astro';
+---
+
+<BaseLayout title="CV/Resume">
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">CV/Resume</div>
+    </div>
+
+    <!--
+    <div class="mb-10 text-justify">
+        Engineer in Informatics Science with 6 years + of experience in software development. Dominion of various
+        programming languages, frameworks, CMS and graphics engines. Experience in WEB design and development. Work with
+        Data Base handled systems, as well as design, normalization and migration. Knowledge of work with graphic design
+        tools for image manipulation , User Interfaces design, Web sites, logos and other ones.
+    </div>
+    -->
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Education</div>
+    </div>
+
+    <div class="time-line-container grid gap-4 mb-10">
+        <TimeLineElement
+            title="Westfield Academy"
+            period="Sep 2013-May 2017"
+            desc="During my time in secondary school, I took GCSE courses in Mathematics, English, and Science, in addition to selecting four elective subjects, which were Geography, History, Business, and Computer Science."
+        />
+        <TimeLineElement
+            title="Baltic Apprenticeships"
+            period="Jan 2018-Dec 2018"
+            desc="Whilst at Baltic Apprenticeships, I completed a Level 3 IT infrastructure apprenticeship program, which is equivalent to an A-level qualification."
+        />
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Experience</div>
+    </div>
+
+    <div class="time-line-container mb-10">
+        <TimeLineElement
+            title="Founder & Managing Director"
+            subtitle="Hosting Business"
+            period="July 2017-July 2019"
+            desc="I was the founder and former owner of a hosting company which offered game, website, and bot hosting solutions. Along with my business partner, I set up the web services and services responsible for hosting our clients. It was eventually sold to another company."
+        />
+        <TimeLineElement
+            title="IT Infrastructure Engineer"
+            subtitle="Unify Business Solutions"
+            period="Nov 2017-Jan 2019"
+            desc="During my time at Unify, I served as a support engineer on the first line support team, collaborating with a senior IT engineer to oversee the support help desk. I ensured that all support tickets were accurately recorded, contained sufficient details, and were promptly assigned to an engineer for resolution before the SLA deadline. Support requests ranged in complexity, from simple tasks like modifying a phone extension name to more intricate tasks such as implementing changes to the phone system routing or installing servers. Unify provides innovative technology and business solutions for businesses and the custodial sector."
+        />
+        <TimeLineElement
+            title="Service Desk Engineer"
+            subtitle="Littlefish IT"
+            period="Jan 2020-May 2020"
+            desc="Whilst at Littlefish, I was employed as a service desk engineer on the Croydon POD, which provided support to the London Borough of Croydon Council. As part of a team of 15, I performed first- and second-line support, managing more than 4500 devices. My responsibilities included answering phone calls and addressing support tickets, which encompassed a wide range of tasks from password resets and Bitlocker recovery to setting up new starters and providing support for various systems and applications."
+        />
+        <TimeLineElement
+            title="Technical Support Agent"
+            subtitle="Krystal Hosting"
+            period="Aug 2020-Present"
+            desc="As a member of the support team, I handle technical support tickets, sales, billing, live chat, and other tasks assigned by my manager. In my role, I frequently address common support queries such as domain name changes, 503 errors resulting from resource limits being hit, customer migrations, and issues with WordPress/Magento. I am also responsible for resolving ModSecurity rule triggers. To progress in my role and handle more complex issues, I have recently begun working on more tickets for our managed server customers."
+        />
+    </div>
+
+    <!--
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Certifications</div>
+    </div>
+
+    <ul class="list-disc mx-6 mb-10 grid gap-2">
+        <li>
+            <a href="https://www.efset.org/cert/DxtNKG" target="_blank">
+                EF SET English Certificate 74/100 (C2 Proficient)</a
+            >
+        </li>
+        <li>
+            <a href="https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp" target="_blank">
+                Scrum Foundation Professional Certificate (SFPC)</a
+            >
+        </li>
+    </ul>
+    -->
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Skills</div>
+    </div>
+
+    <ul class="list-disc md:columns-5 columns-2 mx-6">
+        <li>English (Native)</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>Nuxt.js</li>
+        <li>MySQL</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>Node.js</li>
+        <li>Tailwind</li>
+        <li>Python</li>
+        <li>Vue</li>
+        <li>Linux</li>
+        <li>Astro</li>
+        <li>Laravel</li>
+        <li>Bootstrap</li>
+        <li>Wordpress</li>
+        <li>Git</li>
+        <li>Express.js</li>
+        <li>Jira</li>
+        <li>Trello</li>
+        <li>Next.js</li>
+    </ul>
+</BaseLayout>
