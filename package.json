@@ -1,13 +1,12 @@
 {
-  "name": "devspace-next",
-  "version": "0.1.0",
+  "name": "personal-site",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cloudflare:build": "node node_modules/@cloudflare/next-on-pages/bin/index.js --experimental-minify"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "^20.1.0",
